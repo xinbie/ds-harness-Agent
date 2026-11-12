@@ -1,0 +1,9 @@
+{
+  "name": "hello",
+  "version": "0.1.0",
+  "description": "A minimal demo plugin with one skill that greets you.",
+  "author": {
+    "name": "you",
+    "url": "https://example.com"
+  }
+}

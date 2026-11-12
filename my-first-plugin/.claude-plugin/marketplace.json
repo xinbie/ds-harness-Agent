@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "demo",
+  "description": "My first plugin marketplace, for learning.",
+  "owner": {
+    "name": "you",
+    "url": "https://example.com"
+  },
+  "plugins": [
+    {
+      "name": "hello",
+      "description": "A minimal demo skill that greets you.",
+      "source": "./",
+      "category": "demo"
+    }
+  ]
+}

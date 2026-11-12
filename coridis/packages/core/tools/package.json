@@ -1,0 +1,39 @@
+{
+  "name": "@coridis/tools",
+  "description": "Scoped tool registry and the guarded tool execution pipeline",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.6-alpha.1",
+    "@coridis/scope": "*",
+    "@coridis/session": "*",
+    "@coridis/system-prompt": "*",
+    "@coridis/llm": "*"
+  },
+  "dependencies": {
+    "schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.6-alpha.1",
+    "@coridis/scope": "*",
+    "@coridis/session": "*",
+    "@coridis/system-prompt": "*",
+    "@coridis/llm": "*"
+  }
+}

@@ -1,0 +1,76 @@
+# The coridis-base bundle patch: the shared core of every profile, applied as
+# ONE insert over the empty profile root. Later bundle patches and the user's
+# profile cordis.patch.yml address these rows by id. Row order carries no load
+# semantics: activation is service-availability driven.
+#
+# A patch replaces the targeted row's whole `config` rather than merging into
+# it, so mode-specific values belong to the mode bundle, not here.
+
+- insert:
+    - id: timer
+      name: '@deepseek-ai/cordis-plugin-timer'
+
+    - id: session
+      name: '@coridis/session'
+
+    - id: llm
+      name: '@coridis/llm'
+
+    - id: llm-deepseek
+      name: '@coridis/llm-deepseek'
+      config:
+        model: deepseek-chat
+        apiKeyEnv: DEEPSEEK_API_KEY
+
+    - id: system-prompt
+      name: '@coridis/system-prompt'
+      config:
+        personaPrefix: >-
+          You are coridis, a minimal helpful agent.
+
+    - id: tools
+      name: '@coridis/tools'
+
+    - id: fs
+      name: '@coridis/fs'
+
+    - id: fs-local
+      name: '@coridis/fs-local'
+      config:
+        id: local
+
+    - id: tool-fs
+      name: '@coridis/tool-fs'
+      config:
+        read: true
+        readLimit: 2000
+
+    - id: web
+      name: '@coridis/web'
+
+    - id: web-search-tavily
+      name: '@coridis/web-search-tavily'
+      config:
+        apiKeyEnv: TAVILY_API_KEY
+
+    - id: web-fetch-http
+      name: '@coridis/web-fetch-http'
+      config:
+        timeoutMs: 30000
+        maxOutputChars: 200000
+
+    - id: tool-web
+      name: '@coridis/tool-web'
+      config:
+        search: true
+        fetch: true
+
+    - id: agent
+      name: '@coridis/agent'
+
+    - id: agent-loop
+      name: '@coridis/agent-loop'
+      config:
+        model: deepseek-chat
+        maxSteps: 24
+        maxParallelToolCalls: 4

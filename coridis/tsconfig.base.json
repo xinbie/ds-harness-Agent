@@ -1,0 +1,89 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "composite": true,
+    "incremental": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "types": [
+      "node"
+    ],
+    "paths": {
+      "@coridis/scope": [
+        "./packages/core/scope/src/index.ts"
+      ],
+      "@coridis/session": [
+        "./packages/core/session/src/index.ts"
+      ],
+      "@coridis/system-prompt": [
+        "./packages/core/system-prompt/src/index.ts"
+      ],
+      "@coridis/tools": [
+        "./packages/core/tools/src/index.ts"
+      ],
+      "@coridis/agent": [
+        "./packages/core/agent/src/index.ts"
+      ],
+      "@coridis/agent-loop": [
+        "./packages/core/agent-loop/src/index.ts"
+      ],
+      "@coridis/llm": [
+        "./packages/llm/llm/src/index.ts"
+      ],
+      "@coridis/llm-deepseek": [
+        "./packages/llm/llm-deepseek/src/index.ts"
+      ],
+      "@coridis/fs": [
+        "./packages/fs/fs/src/index.ts"
+      ],
+      "@coridis/fs-local": [
+        "./packages/fs/fs-local/src/index.ts"
+      ],
+      "@coridis/tool-fs": [
+        "./packages/fs/tool-fs/src/index.ts"
+      ],
+      "@coridis/web": [
+        "./packages/web/web/src/index.ts"
+      ],
+      "@coridis/web-search-tavily": [
+        "./packages/web/web-search-tavily/src/index.ts"
+      ],
+      "@coridis/web-fetch-http": [
+        "./packages/web/web-fetch-http/src/index.ts"
+      ],
+      "@coridis/tool-web": [
+        "./packages/web/tool-web/src/index.ts"
+      ],
+      "@coridis/app-boot": [
+        "./packages/boot/app-boot/src/index.ts"
+      ],
+      "@coridis/base": [
+        "./packages/bundle/base/src/index.ts"
+      ],
+      "@coridis/headless": [
+        "./packages/bundle/headless/src/index.ts"
+      ],
+      "@coridis/headless/startup": [
+        "./packages/bundle/headless/src/startup.ts"
+      ],
+      "@coridis/cli/lib/bin.js": [
+        "./apps/cli/src/bin.ts"
+      ]
+    }
+  }
+}

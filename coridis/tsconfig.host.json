@@ -1,0 +1,67 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "rewriteRelativeImportExtensions": false
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/core/scope"
+    },
+    {
+      "path": "./packages/core/session"
+    },
+    {
+      "path": "./packages/core/system-prompt"
+    },
+    {
+      "path": "./packages/core/tools"
+    },
+    {
+      "path": "./packages/core/agent"
+    },
+    {
+      "path": "./packages/core/agent-loop"
+    },
+    {
+      "path": "./packages/llm/llm"
+    },
+    {
+      "path": "./packages/llm/llm-deepseek"
+    },
+    {
+      "path": "./packages/fs/fs"
+    },
+    {
+      "path": "./packages/fs/fs-local"
+    },
+    {
+      "path": "./packages/fs/tool-fs"
+    },
+    {
+      "path": "./packages/web/web"
+    },
+    {
+      "path": "./packages/web/web-search-tavily"
+    },
+    {
+      "path": "./packages/web/web-fetch-http"
+    },
+    {
+      "path": "./packages/web/tool-web"
+    },
+    {
+      "path": "./packages/boot/app-boot"
+    },
+    {
+      "path": "./packages/bundle/base"
+    },
+    {
+      "path": "./packages/bundle/headless"
+    },
+    {
+      "path": "./apps/cli"
+    }
+  ]
+}

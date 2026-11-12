@@ -1,0 +1,52 @@
+{
+  "name": "@coridis/base",
+  "description": "The shared first bundle layer: model, tools, fs, web, and agent loop",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./src/*": "./src/*",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "coridis": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.6-alpha.1"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.6-alpha.1"
+  },
+  "dependencies": {
+    "@deepseek-ai/cordis-plugin-timer": "~1.1.8-alpha.1",
+    "@coridis/session": "*",
+    "@coridis/llm": "*",
+    "@coridis/llm-deepseek": "*",
+    "@coridis/system-prompt": "*",
+    "@coridis/tools": "*",
+    "@coridis/fs": "*",
+    "@coridis/fs-local": "*",
+    "@coridis/tool-fs": "*",
+    "@coridis/web": "*",
+    "@coridis/web-search-tavily": "*",
+    "@coridis/web-fetch-http": "*",
+    "@coridis/tool-web": "*",
+    "@coridis/agent": "*",
+    "@coridis/agent-loop": "*"
+  }
+}

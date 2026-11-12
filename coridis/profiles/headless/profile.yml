@@ -1,0 +1,6 @@
+# coridis profile template: the ordered bundle layers that app-boot stacks over
+# an empty plugin root. A bundle declares its own patch in package.json under
+# the `coridis.bundle.patch` field.
+bundles:
+  - '@coridis/base'
+  - '@coridis/headless'

@@ -1,0 +1,53 @@
+{
+  "name": "@coridis/headless",
+  "description": "One-shot task bundle: start the agent, stream the answer, exit",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./startup": {
+      "types": "./lib/types/startup.d.ts",
+      "default": "./lib/startup.js"
+    },
+    "./src/*": "./src/*",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/types/**/*.d.ts",
+    "lib/startup.js",
+    "cordis.patch.yml"
+  ],
+  "license": "MIT",
+  "coridis": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "~4.0.6-alpha.1",
+    "@coridis/agent": "*",
+    "@coridis/agent-loop": "*",
+    "@coridis/llm": "*",
+    "@coridis/session": "*",
+    "@coridis/fs": "*"
+  },
+  "dependencies": {
+    "schemastery": "^3.18.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "~4.0.6-alpha.1",
+    "@coridis/agent": "*",
+    "@coridis/agent-loop": "*",
+    "@coridis/llm": "*",
+    "@coridis/session": "*",
+    "@coridis/fs": "*"
+  }
+}

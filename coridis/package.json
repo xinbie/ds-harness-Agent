@@ -1,0 +1,32 @@
+{
+  "name": "coridis",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "coridis - a minimal agent harness built from Cordis plugins, with an architecture modeled on deepseek-harness.",
+  "packageManager": "npm@10.9.9",
+  "workspaces": [
+    "packages/*/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20.19.0",
+    "npm": ">=10.0.0"
+  },
+  "scripts": {
+    "build": "tsc -b tsconfig.host.json && tsdown",
+    "typecheck": "tsc -b tsconfig.host.json",
+    "test": "vitest run",
+    "test:web": "vitest run tests/web-request.spec.ts --reporter=verbose",
+    "dev": "npm run build && node apps/cli/lib/bin.js",
+    "coridis": "node apps/cli/lib/bin.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@deepseek-ai/cordis": "~4.0.6-alpha.1",
+    "schemastery": "^3.18.0",
+    "tsdown": "^0.23.3",
+    "typescript": "^5.7.2",
+    "vitest": "^5.0.5"
+  }
+}

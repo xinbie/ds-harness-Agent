@@ -1,0 +1,17 @@
+# The coridis-headless bundle patch: one-shot task mode directly over
+# @coridis/base. It mounts no HTTP server, Web UI, or browser plugin.
+
+- id: system-prompt
+  config:
+    personaPrefix: >-
+      You are coridis, a minimal agent with web search, web fetch, and file
+      read. Cite sources when you use the web. Use the read tool for local
+      files instead of guessing.
+
+- insert:
+    # The CLI fills this row's config from its in-memory patch layer.
+    - id: headless-startup
+      name: '@coridis/headless/startup'
+
+    - id: headless-runner
+      name: '@coridis/headless'
